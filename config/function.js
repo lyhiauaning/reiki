@@ -54,12 +54,25 @@ function ispc(){
     }
     return flag;
 }
+function isllq(){
+var ua = navigator.userAgent.toLowerCase();
+if(ua.match(/MicroMessenger/i)=="micromessenger"){
+  return "weixin";
+} else if (ua.match(/QQ/i) == "qq"){
+  return "QQ";
+}
+return false;
+}
 function contact(id){
   if(id == "qq"){
     if(ispc() == true){
       bullet('<img src="/img/qq.png">');
     } else if(ispc() == false){
-      location.href="mqqwpa://im/chat?chat_type=wpa&uin=2185750134";
+      if (isllq() == "QQ"){
+        location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0")
+      } else {
+        location.href="mqqwpa://im/chat?chat_type=wpa&uin=2185750134";
+      }
     }
   } else if(id == "mail"){
     if(ispc() == true){
