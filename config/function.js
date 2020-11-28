@@ -1,7 +1,3 @@
-function test(){
-  /*alert("艹泥马！");
-  bullet("艹泥马！<img src='logo.gif'>");*/
-}
 function Substitution(id,url,text,type){
 	x=document.getElementById(id);  // 找到元素
 	if(type == "a"){
@@ -38,4 +34,47 @@ function video(){
     <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Nv411r7yU" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>
   `;
   document.write(video);
+}
+function ispc(){
+    var userAgentInfo = navigator.userAgent;
+    var Agents = [
+      "Android",
+      "iPhone",
+      "SymbianOS",
+      "Windows Phone",
+      "iPad",
+      "iPod"
+    ];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        flag = false;
+        break;
+      }
+    }
+    return flag;
+}
+function contact(id){
+  if(id == "qq"){
+    if(ispc() == true){
+      bullet('<img src="/img/qq.png">');
+    } else if(ispc() == false){
+      location.href="mqqwpa://im/chat?chat_type=wpa&uin=2185750134";
+    }
+  } else if(id == "mail"){
+    if(ispc() == true){
+      alert('邮箱：lyhiauaning@163.com');
+    } else if(ispc() == false){
+      location.href="mailto:lyhiauaning@163.com";
+    }
+  }
+}
+function test(){
+  /*alert("艹泥马！");
+  bullet("艹泥马！<img src='logo.gif'>");*/
+  if(ispc() == true){
+    alert('这是电脑');
+  } else if(ispc() == false){
+    alert("这是手机");
+  }
 }

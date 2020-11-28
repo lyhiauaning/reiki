@@ -46,6 +46,17 @@ discoloration:visited{
   position: relative;
   margin-top: 50vh;
 }
+.cen1{
+  color: white;
+  font-size: 10vw;
+  font-family:"微软雅黑";
+  font-weight: 900;
+  background: #aaaadc;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  margin-top: 3vh;
+}
 .center{
   margin-left: 5vw;
   color: white;
