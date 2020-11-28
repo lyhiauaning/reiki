@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>哔哩哔哩1024程序员节</title>
+		<meta name="keywords" content="Welcome to bilibili 2020 Programmer's Day Special System">
+		<meta name="description" content="\程序员创造世界/ B站1024专场正式开启，宝藏满满，点击直达！">
+		<meta name="spm_prefix" content="888.20004"> 
+		<script type="text/javascript">
+		var msource;
+		try {
+		  var u = new URL(location.href);
+		  var sp = u.searchParams;
+		  msource = sp.get('msource') || sp.get('from') || sp.get('from_module')
+		}
+		catch(e){console.warn('get page source from query failed', e)}
+		window.activity = {id: 28598, spmId: '888.20004'};
+		window.reportMsgObj = {};
+		window.reportConfig = {
+		  sample: 1,
+		  scrollTracker: true,
+		  msgObjects: 'reportMsgObj',
+		  pvMsg: {msource: msource},
+		  errorTracker: true
+		};
+		// 模块的点击上报
+		document.addEventListener("click", function (e) {
+		  for (let i = 0; i < e.path.length; i++) {
+			var node = e.path[i];
+			if (
+			  node &&
+			  node.className &&
+			  node.className.indexOf("report-wrap-module") > -1
+			) {
+			  var k = "BiliActModuleClick_" + node.id + "_" + node.dataset.module;
+			  var value = 1;
+			  try {
+				window.reportMsgObj &&
+				  window.reportObserver &&
+				  ((window.reportMsgObj[k] = value),
+				  window.reportObserver.forceCommit &&
+					window.reportObserver.forceCommit());
+			  } catch (error) {
+				console.error("[logger]", error);
+			  }
+			}
+		  }
+		});		
+	  </script> 
+		<script src="./log-reporter.js"></script> 
+		<script>!function(global){
+		  if (
+			/\/preview\//.test(global.location.href) || global.location.search.indexOf('__activity-plat-preview=1') >= 0
+		  ) {
+			return false;
+		  }
+		  var ua = navigator.userAgent;
+		  var isSymbian = /(?:SymbianOS)/.test(ua) || /(?:Windows Phone)/.test(ua);
+		  var isAndroid = /(?:Android)/.test(ua);
+		  var isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (/(?:Firefox)/.test(ua) && /(?:Tablet)/.test(ua));
+		  var isPhone = /(?:iPhone)/.test(ua) && !isTablet;
+
+		  var isMobile = isPhone || isAndroid || isSymbian;
+		  var isPc = !isMobile;
+
+		  var jumpUrl = 'https://www.bilibili.com/blackboard/activity-20201024.html';
+		  var plat = 'H5'
+
+		  if (
+			(plat === 'H5' && (isPc && !isTablet)) ||
+			(plat === 'PC' && (isMobile || isTablet))
+		  ) {
+			location.href = jumpUrl + (jumpUrl.indexOf('?') > -1 ? '' : window.location.search + window.location.hash);
+		  }
+		}(window);</script>
+		<link href="./chunk-vendors.d787b6c4.css" rel="stylesheet">
+		<link href="./index.cf791a0f.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="app"></div>
+		<script src="./chunk-vendors.306d8503.js" crossorigin="anonymous"></script>
+		<script src="./index.604cf511.js" crossorigin="anonymous"></script>
+	</body>
+</html>
