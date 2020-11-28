@@ -69,8 +69,7 @@ function contact(id){
       bullet('<img src="/img/qq.png">');
     } else if(ispc() == false){
       if (isllq() == "QQ"){
-        location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
-        
+        location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0");
       } else {
         location.href="mqqwpa://im/chat?chat_type=wpa&uin=2185750134";
       }
