@@ -66,11 +66,7 @@ return false;
 function contact(id){
   if(id == "qq"){
     if(ispc() == true){
-      if(isllq() == "QQ"){
-        location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
-      } else {
-        bullet('<img src="/img/qq.png">');
-      }
+      bullet('<img src="/img/qq.png">');
     } else if(ispc() == false){
       if (isllq() == "QQ"){
         location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
