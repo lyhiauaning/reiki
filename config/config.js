@@ -1,7 +1,7 @@
 /*配置*/
 website=true;//网站总开关
 skip=false;//跳转机制
-title="灵气";
+title="曦灵";
 
 /*机制*/
 if(location.host != "gulanguage.cn" && skip == true && website == true){

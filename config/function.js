@@ -35,6 +35,11 @@ function video(){
   `;
   document.write(video);
 }
+function video_w(){
+  bvid[0] = "BV1KZ4y157xQ";
+  
+  document.write(video);
+}
 function ispc(){
     var userAgentInfo = navigator.userAgent;
     var Agents = [
@@ -84,6 +89,25 @@ function contact(id){
     } else if(ispc() == false){
       location.href="mailto:lyhiauaning@163.com";
     }
+  } else if(id == "qun"){
+    if(ispc() == true){
+      alert('群号码：821096499');
+    } else if(ispc() == false){
+      location.href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=821096499&card_type=group&source=qrcode";
+    }
+  } else if(id == "qun2"){
+    if(ispc() == true){
+      alert('群号码：624953187');
+    } else if(ispc() == false){
+      location.href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=624953187&card_type=group&source=qrcode";
+    }
+  }
+}
+function update(){
+  if(ispc() == true){
+    location.href="";
+  } else if(ifpc() == false){
+    location.href="";
   }
 }
 function test(){
