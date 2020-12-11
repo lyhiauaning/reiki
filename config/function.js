@@ -126,7 +126,7 @@ function sponsor(){
     } else if(isllq() == "alipay"){
       location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
     } else {
-      bullet('手机扫码：<br /><img src="/img/pay.png">');
+      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="https://gulanguage.cn/page/sponsor.html">我</a><br /><img src="/img/pay.png">');
     }
   }
 }
