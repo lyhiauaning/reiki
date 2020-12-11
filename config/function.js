@@ -12,6 +12,7 @@ function menu(){
     <li class="active"><a href="/page/video.html"><discoloration>B站视频</discoloration></a></li>
     <li class="active"><a href="/page/code.html"><discoloration>代码页面</discoloration></a></li>
     <li class="active"><a href="/page/a-z.html"><discoloration>A-Z站</discoloration></a></li>
+    <li class="active"><a href="JavaScript:sponsor();"><discoloration>赞助我</discoloration></a></li>
   `;
     document.write(menu);
 }
@@ -65,6 +66,8 @@ if(ua.match(/MicroMessenger/i)=="micromessenger"){
   return "weixin";
 } else if (ua.match(/QQ/i) == "qq"){
   return "QQ";
+} else if (ua.match(/alipay/i) == "alipay"){
+  return "alipay";
 }
 return false;
 }
@@ -108,6 +111,23 @@ function update(){
     location.href="";
   } else if(ifpc() == false){
     location.href="";
+  }
+}
+function sponsor(){
+  if(ispc() == true){
+    bullet('手机扫码：<br /><img src="/img/pay.png">');
+  } else {
+    if(isllq() == "weixin"){
+      bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/pay.png">');
+      /*location.href="wxp://f2f0849aCf7Jr8dy2dWhFEkJNzQf2-0YO1HZ";*/
+    } else if(isllq() == "QQ"){
+      bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/pay.png">');
+      /*location.href="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ9syfkggYgYfO_gU%3D_xxx_sign&u=2185750134&n=Gulanguage";*/
+    } else if(isllq() == "alipay"){
+      location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
+    } else {
+      bullet('手机扫码：<br /><img src="/img/pay.png">');
+    }
   }
 }
 function test(){

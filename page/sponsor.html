@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>曦灵｜赞助</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <script src="/script.js"></script>
+    <script src="/plug-js/alert.js"></script>
+    <script>
+      function sponsor_dump(){
+        if(ispc() == true){
+          if(isllq() == "QQ"){
+            bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/qqsponsor.png">');
+          } else if(isllq() == "weixin"){
+            bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/wxsponsor.png">');
+          } else if(isllq() == "alipay"){
+            location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
+          }
+        }
+      }
+    </script>
+    <style>
+      
+    </style>
+  </body>
+</html>
