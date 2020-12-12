@@ -118,10 +118,10 @@ function sponsor(){
     bullet('手机扫码：<br /><img src="/img/pay.png">');
   } else {
     if(isllq() == "weixin"){
-      bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/pay.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/pay.png">');
       /*location.href="wxp://f2f0849aCf7Jr8dy2dWhFEkJNzQf2-0YO1HZ";*/
     } else if(isllq() == "QQ"){
-      bullet('请保存图片，然后再扫一扫中打开<br /><img src="/img/pay.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/pay.png">');
       /*location.href="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ9syfkggYgYfO_gU%3D_xxx_sign&u=2185750134&n=Gulanguage";*/
     } else if(isllq() == "alipay"){
       location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
