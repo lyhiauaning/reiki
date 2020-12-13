@@ -130,12 +130,16 @@ function sponsor(){
     }
   }
 }
-function test(){
-  /*alert("艹泥马！");
-  bullet("艹泥马！<img src='logo.gif'>");*/
-  if(ispc() == true){
-    alert('这是电脑');
-  } else if(ispc() == false){
-    alert("这是手机");
-  }
+function getUrlParam(name,url){
+  if (!url) url = window.location.href;
+  url = url;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results)
+      return null;
+  if (!results[2])
+      return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+//获取URL参数
