@@ -77,7 +77,7 @@ function contact(id){
       if(isllq() == "QQ"){
         location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
       } else {
-        bullet('<img src="/img/qq.png">');
+        bullet('<img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iugPTjbrw3c&dow=true">');
       }
     } else if(ispc() == false){
       if (isllq() == "QQ"){
@@ -118,15 +118,15 @@ function sponsor(){
     bullet('手机扫码：<br /><img src="/img/pay.png">');
   } else {
     if(isllq() == "weixin"){
-      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/pay.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iAnfWjbrw2b&dow=true">');
       /*location.href="wxp://f2f0849aCf7Jr8dy2dWhFEkJNzQf2-0YO1HZ";*/
     } else if(isllq() == "QQ"){
-      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/pay.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iAnfWjbrw2b&dow=true">');
       /*location.href="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ9syfkggYgYfO_gU%3D_xxx_sign&u=2185750134&n=Gulanguage";*/
     } else if(isllq() == "alipay"){
       location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
     } else {
-      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="https://gulanguage.cn/page/sponsor.html">我</a><br /><img src="/img/pay.png">');
+      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="https://gulanguage.cn/page/sponsor.html">我</a><br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iAnfWjbrw2b&dow=true">');
     }
   }
 }
