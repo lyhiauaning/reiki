@@ -4,7 +4,7 @@
 本网站同时部署于Github和Gitee  
 Github：
 ____
-[网站地址](https://gulanguage.cn/)
+[网站地址](https://gulanguage.cn/)  
 Gitee：  
 ____
-[网站地址](http://elythy.gitee.io/)
+[网站地址](http://elythy.gitee.io/)  
