@@ -54,7 +54,7 @@
     </header>
     <div style="margin-top: 100px;"><!--占位--></div>
     <script>setInterval("time()",1000);</script>
-    <div id="times" onclick="PFunction()"></div>
+    <div id="times"></div>
     <p class="cen">曦灵</p>
     <p class="copyright">&copy;曦灵 ｜ <a href="/page/about.html">关于</a></p>
   </body>

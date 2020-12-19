@@ -126,7 +126,7 @@ function sponsor(){
     } else if(isllq() == "alipay"){
       location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
     } else {
-      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="https://gulanguage.cn/page/sponsor.html">我</a><br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iAnfWjbrw2b&dow=true">');
+      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="/page/sponsor.html">我</a><br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iAnfWjbrw2b&dow=true">');
     }
   }
 }
@@ -148,4 +148,16 @@ function time(){
   var div1 = document.getElementById("times");
   div1.innerHTML = "<p class=\"time\">"+dtime+"</p>";
 }
-
+function PFunction(){
+  bullet(`
+    <h1>功能区</h1>
+    <a href="/page/video.html"><p>B站视频</p></a><br />
+    <a href="/page/code.html"><p>代码源码</p></a><br />
+    <a href="/page/a-z.html"><p>A-Z站</p></a><br />
+    <a href="JavaScript:contact('qq');"><p>QQ联系</p></a><br />
+    <a href="JavaScript:contact('mail');"><p>邮箱反馈</p></a><br />
+    <a href="JavaScript:contact('qun');"><p>加入Q群</p></a><br />
+    <a href=""><p></p></a><br />
+    <a href=""><p></p></a><br />
+  `);
+}
