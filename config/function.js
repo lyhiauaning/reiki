@@ -141,5 +141,11 @@ function getUrlParam(name,url){
   if (!results[2])
       return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}//获取/接收URL参数
+function time(){
+  var date=new Date();
+  var dtime=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  var div1 = document.getElementById("times");
+  div1.innerHTML = "<p class=\"time\">"+dtime+"</p>";
 }
-//获取URL参数
+
