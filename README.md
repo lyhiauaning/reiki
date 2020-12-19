@@ -1,6 +1,6 @@
 曦灵
 ====
-![logo](https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/i0ALbjbrw1a&dow=true)  
+![logo](https://gulanguage.cn/img/logo.gif)  
 本网站同时部署于Github和Gitee  
 Github：
 ____
