@@ -157,7 +157,5 @@ function PFunction(){
     <a href="JavaScript:contact('qq');"><p>QQ联系</p></a><br />
     <a href="JavaScript:contact('mail');"><p>邮箱反馈</p></a><br />
     <a href="JavaScript:contact('qun');"><p>加入Q群</p></a><br />
-    <a href=""><p></p></a><br />
-    <a href=""><p></p></a><br />
   `);
 }
