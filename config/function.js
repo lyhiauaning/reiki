@@ -17,22 +17,44 @@ function menu(){
     document.write(menu);
 }
 function video(){
-    /*
-      B站引入视频参数:
-      danmaku=0  (1=打开弹幕 0=关闭弹幕)
-      high_quality=1  (1=最高画质 0=最低画质)
-      小米内容中心播放视频api
-      https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3D<视频BV号>%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_<视频BV号>
-      实例：https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3DBV1Yh411Z78b%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_BV1Yh411Z78b
-    */
+  /*
+    B站引入视频参数:
+    danmaku=0  (1=打开弹幕 0=关闭弹幕)
+    high_quality=1  (1=最高画质 0=最低画质)
+    小米内容中心播放视频api
+    https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3D<视频BV号>%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_<视频BV号>
+    实例：https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3DBV1Yh411Z78b%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_BV1Yh411Z78b
+  */
+  if(ispc() == false){
+    var style=`
+      <style>
+        .iv{
+          width: 100%;
+          height: 56vw;
+        }
+      </style>
+    `;
+  } else {
+    var style=`
+      <style>
+        .iv{
+          width: 64vw;
+          height: 36vw;
+          margin-left: 3vw
+        }
+      </style>
+    `;
+  }
+  var head = document.getElementsByTagName('head')[0];
+  head.innerHTML += style;
   var video=`
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1KZ4y157xQ" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw; margin-top: 55px;"></iframe>
-    <!--<iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Yh411Z78b" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>-->
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV11K4y1Z7wP" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1TZ4y157m2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1B54y1z7Qq" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1op4y1k79P" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw;"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Nv411r7yU" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56vw; margin-bottom: 55px"></iframe>
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1KZ4y157xQ" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv" style="margin-top: 55px;"></iframe>
+    <!--<iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Yh411Z78b" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>-->
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV11K4y1Z7wP" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1TZ4y157m2" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1B54y1z7Qq" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1op4y1k79P" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
+    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Nv411r7yU" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv" style="margin-bottom: 55px"></iframe>
   `;
   document.write(video);
 }
