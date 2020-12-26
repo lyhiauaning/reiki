@@ -148,14 +148,33 @@ function time(){
   var div1 = document.getElementById("times");
   div1.innerHTML = "<p class=\"time\">"+dtime+"</p>";
 }
+function pp(tp){
+  alertBtnClick();
+  PFunction(tp);
+}
 function PFunction(){
   bullet(`
     <h1>功能区</h1>
-    <a href="/page/video.html"><p>B站视频</p></a><br />
-    <a href="/page/code.html"><p>代码源码</p></a><br />
-    <a href="/page/a-z.html"><p>A-Z站</p></a><br />
-    <a href="JavaScript:contact('qq');"><p>QQ联系</p></a><br />
-    <a href="JavaScript:contact('mail');"><p>邮箱反馈</p></a><br />
-    <a href="JavaScript:contact('qun');"><p>加入Q群</p></a><br />
+    <iframe src="/page/pfunction.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="pfunction"></iframe>
   `);
+}
+function Change_Background(url){
+  var style=`
+    <style>
+      html{
+        background-image: url(`+url+`);
+        background-color: #aaa;
+        background-size: cover;
+        -webkit-background-size: cover 100%;
+        -o-background-size: cover 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  `;
+  var head = document.getElementsByTagName('head')[0];
+  head.innerHTML += style;
 }

@@ -119,3 +119,8 @@ window.bullet = function(msg){
   }
   alertConfirmBtn.addEventListener("click", alertBtnClick);
 }
+function alertBtnClick(){
+  body.removeChild(alertMask);
+  maskStyle = head.getElementsByClassName('mask-style')[0];
+  head.removeChild(maskStyle);  //移除生成的css样式
+}
