@@ -12,7 +12,6 @@ function menu(){
     <li class="active"><a href="/page/video.html"><discoloration>B站视频</discoloration></a></li>
     <li class="active"><a href="/page/code.html"><discoloration>代码页面</discoloration></a></li>
     <li class="active"><a href="/page/a-z.html"><discoloration>A-Z站</discoloration></a></li>
-    <li class="active"><a href="JavaScript:sponsor();"><discoloration>赞助我</discoloration></a></li>
   `;
     document.write(menu);
 }

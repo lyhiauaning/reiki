@@ -9,8 +9,8 @@ html{
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
-  /*margin: 0; 
-  padding: 0;*/
+  margin: 0; 
+  padding: 0;
 }
 a{
   text-decoration: none;
@@ -89,4 +89,76 @@ discoloration:visited{
 .pfunction{
   width: 50vw;
   height: 30vh;
+}
+
+
+.main{
+  width:40px;
+  height:40px;
+  position: absolute;
+  left:50%;
+  top:90%;
+  transform: translate(-50%,-50%);
+  transition:0.5s linear;
+}
+.left,.right,.middle{
+  width:20px;
+  height:100%;
+  float:right;
+  overflow:hidden;
+}
+.left{
+  background:#3742fa;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.right{
+  background:#3742fa;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.middle{
+  width:0px;
+  height:100%;
+  overflow:hidden;
+  transition:0.5s linear;
+}
+.middle p{
+  margin:0;
+  height:39px;
+  white-space:nowrap;
+  font-size:20px;
+  line-height:39px;
+  background:#5352ed;
+  transform:translateY(1px);
+}
+.middle p a{
+  margin-left:15px;
+  color:white;
+}
+.middle p a:hover{
+  color:#ff6348;
+}
+.main:hover{
+  width:204px;
+}
+.main:hover .middle{
+  width:156px;
+}
+.main:hover .left i,.main:hover .right i{
+  color:#3742fa;
+}
+.left i, .right i{
+  font-size:20px;
+  height:100%;
+  line-height:40px;
+  color:#2ed573;
+  text-shadow:0 0 10px #2ed573;
+  transition: 0.5s linear;
+}
+.left i{
+  transform:translateX(50%);
+}
+.right i{
+  transform:translateX(-50%);
 }
