@@ -17,12 +17,14 @@ function menu(){
 }
 function video(){
   /*
-    B站引入视频参数:
-    danmaku=0  (1=打开弹幕 0=关闭弹幕)
-    high_quality=1  (1=最高画质 0=最低画质)
-    小米内容中心播放视频api
-    https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3D<视频BV号>%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_<视频BV号>
-    实例：https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3DBV1Yh411Z78b%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_BV1Yh411Z78b
+    哔哩哔哩html引入视频api：
+      API：http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=<视频BV号>
+      参数:
+        danmaku=0  (1=打开弹幕 0=关闭弹幕)
+        high_quality=1  (1=最高画质 0=最低画质)
+    小米内容中心播放视频api：
+      API：https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3D<视频BV号>%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_<视频BV号>
+      实例：https://content.mcc.miui.com/bilibiliVideo?resource=https%3A%2F%2Fplayer.bilibili.com%2Fplayer.html%3Fbvid%3DBV1Yh411Z78b%26autoplay%3D1%26bsource%3Dxiaomi_cooperate&bizDocId=bilibili_BV1Yh411Z78b
   */
   if(ispc() == false){
     var style=`
@@ -46,21 +48,23 @@ function video(){
   }
   var head = document.getElementsByTagName('head')[0];
   head.innerHTML += style;
-  var video=`
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1KZ4y157xQ" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv" style="margin-top: 55px;"></iframe>
-    <!--<iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Yh411Z78b" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>-->
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV11K4y1Z7wP" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1TZ4y157m2" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1B54y1z7Qq" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1op4y1k79P" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv"></iframe>
-    <iframe src="http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid=BV1Nv411r7yU" id="iv" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="iv" style="margin-bottom: 55px"></iframe>
-  `;
-  document.write(video);
-}
-function video_w(){
-  bvid[0] = "BV1KZ4y157xQ";
-  
-  document.write(video);
+  var bvid = [
+    "BV1KZ4y157xQ",
+    "BV11K4y1Z7wP",
+    "BV1TZ4y157m2",
+    "BV1B54y1z7Qq",
+    "BV1op4y1k79P",
+    "BV1Nv411r7yU",
+    "BV1ua4y1n785"
+  ];
+  var number = 0;
+  document.write('<div style="margin-top:55px;"></div>');
+  while (bvid[number]) {
+    var video = "<iframe src=\"http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid="+bvid[number]+"\" id=\"iv\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\" class=\"iv\"></iframe>";
+    document.write(video);
+    number++;
+  }
+  document.write('<div style="height:55px;width:100vw;"></div>');
 }
 function ispc(){
     var userAgentInfo = navigator.userAgent;
@@ -124,6 +128,12 @@ function contact(id){
       alert('群号码：624953187');
     } else if(ispc() == false){
       location.href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=624953187&card_type=group&source=qrcode";
+    }
+  } else if(id == "bili"){
+    if(ispc() == true){
+      location.href="https://space.bilibili.com/507050386";
+    } else if(ispc() == false){
+      location.href="bilibili://space/507050386";
     }
   }
 }
