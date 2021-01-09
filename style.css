@@ -1,3 +1,7 @@
+@font-face{
+ font-family: master;
+ src: url('/font/master.ttf');
+}
 html{
   background-image: url(/img/background.png);
   background-color: #aaa;
@@ -12,6 +16,9 @@ html{
   margin: 0; 
   padding: 0;
 }
+p,h1,h2,h3,h4,h5,h6{
+  font-family: master;
+}
 a{
   text-decoration: none;
   color: white;
@@ -24,13 +31,22 @@ a:visited{
 }
 discoloration{
   text-decoration: none;
-  color: white;
+  font-family: master;
+  background: linear-gradient(to right, #ffcc70, #4158d0, #c850c0);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 discoloration:hover{
-  color: blue;
+  font-family: master;
+  background: linear-gradient(to right, #4158d0, #ffcc70, #c850c0);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 discoloration:visited{
-  color: blue;
+  font-family: master;
+  background: linear-gradient(to right, #4158d0, #ffcc70, #c850c0);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .copyright{
   color: white;
@@ -40,11 +56,12 @@ discoloration:visited{
   position:fixed;
   height: 30px;
   width: 100vw;
+  font-family: master;
 }
 .cen{
   color: white;
   font-size: 10vw;
-  font-family:"微软雅黑";
+  font-family: master;
   font-weight: 90px;
   background: #aaaadc;
   margin: 0 auto;
@@ -61,7 +78,7 @@ discoloration:visited{
 .cen1{
   color: white;
   font-size: 10vw;
-  font-family:"微软雅黑";
+  font-family: master;
   font-weight: 900;
   background: #aaaadc;
   margin: 0 auto;
@@ -85,6 +102,7 @@ discoloration:visited{
   font-size: 50px;
   margin: 0 auto;
   text-align: center;
+  font-family: master;
 }
 .pfunction{
   width: 50vw;

@@ -42,3 +42,8 @@ function video(){
   `;
   document.write(video);
 }
+
+/*
+放到液面的<script>标签内,标题滚动
+setInterval(function(){var oldTitle=document.title;var titleArr=oldTitle.split('');titleArr.push(titleArr.shift());document.title=titleArr.join('');},100);
+*/

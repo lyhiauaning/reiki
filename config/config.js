@@ -1,7 +1,7 @@
 /*配置*/
-website=true;//网站总开关
-skip=false;//跳转机制
-title="曦灵";
+var website = true;//网站总开关
+var skip = false;//跳转机制
+var title = "曦灵";//网站名称
 
 /*机制*/
 if(location.host != "gulanguage.cn" && skip == true && website == true){
@@ -11,6 +11,6 @@ if(location.host != "gulanguage.cn" && skip == true && website == true){
   location.href="/page/off.html";
 }
 
-if(website==false){
+if(website == false){
   location.href="/page/off.html";
 }
