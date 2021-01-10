@@ -35,13 +35,13 @@ function video(){
         }
       </style>
     `;
-  } else {
+  } else if(ispc() == true){
     var style=`
       <style>
         .iv{
           width: 64vw;
           height: 36vw;
-          margin-left: 3vw
+          margin-left: 3vw;
         }
       </style>
     `;
@@ -58,13 +58,13 @@ function video(){
     "BV1ua4y1n785"
   ];
   var number = 0;
-  document.write('<div style="margin-top:55px;"></div>');
+  document.write('<div style="height:55px;width:100%;"></div>');
   while (bvid[number]) {
     var video = "<iframe src=\"http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid="+bvid[number]+"\" id=\"iv\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\" class=\"iv\"></iframe>";
     document.write(video);
     number++;
   }
-  document.write('<div style="height:55px;width:100vw;"></div>');
+  document.write('<div style="height:55px;width:100%;"></div>');
 }
 function ispc(){
     var userAgentInfo = navigator.userAgent;
