@@ -199,26 +199,49 @@ function PFunction(){
     <iframe src="/page/pfunction.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="pfunction"></iframe>
   `);
 }
+function PFT(){
+  bullet(`
+    <a href="/page/video.html"><p class="pt" style="text-align:center;">B站视频</p></a>
+    <a href="/page/code.html"><p class="pt" style="text-align:center;">代码源码</p></a>
+    <a href="/page/a-z.html"><p class="pt" style="text-align:center;">A-Z站</p></a>
+    <a href="JavaScript:contact('qq');"><p class="pt" style="text-align:center;">QQ联系</p></a>
+    <a href="JavaScript:contact('mail');"><p class="pt" style="text-align:center;">邮箱反馈</p></a>
+    <a href="JavaScript:contact('qun');"><p class="pt" style="text-align:center;">加入Q群</p></a>
+    <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：background.jpg、background2.jpg、background.png'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
+    <a href="JavaScript:player(prompt('请输入音乐链接'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
+  `);
+}
 function Change_Background(url){
-  var style=`
-    <style>
-      html{
-        background-image: url(`+url+`);
-        background-color: #aaa;
-        background-size: cover;
-        -webkit-background-size: cover 100%;
-        -o-background-size: cover 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
-  `;
-  var head = document.getElementsByTagName('head')[0];
-  head.innerHTML += style;
+  if(url != null){
+    if(url.substr(0,4) != "http"){
+      url = "/img/" + url;
+    }
+    var style=`
+      <style>
+        html{
+          background-image: url(`+url+`);
+          background-color: #aaa;
+          background-size: cover;
+          -webkit-background-size: cover 100%;
+          -o-background-size: cover 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          width: 100vw;
+          height: 100vh;
+        }
+      </style>
+    `;
+    var head = document.getElementsByTagName('head')[0];
+    head.innerHTML += style;
+  }
 }
 function sleep(d){
   for(var t = Date.now();Date.now() - t <= d;);
+}
+function player(url){
+  if(url != null){
+    var audio= new Audio(url);
+    audio.play();
+  }
 }
