@@ -12,11 +12,23 @@ if(location.host != "gulanguage.cn" && skip == true && website == true){
   location.href="/page/off.html";
 }
 
-if(location.host == "gulanguage.cn" && skip2 == true){
+if(location.host == "gulanguage.cn" && skip2 == true && isllq() == false){
   if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   } else if(navigator.language == "en-US"){
     location.href = "https://www.gulanguage.cn/";
+  }
+} else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
+  if(navigator.language == "en-US"){
+    location.href = "https://www.gulanguage.cn/";
+  }
+} else if(location.host == "www.gulanguage.cn" && skip2 == true && isllq() == false){
+  if(navigator.language == "zh-CN"){
+    location.href = "https://elythy.gitee.io/";
+  }
+} else if(location.host == "www.gulanguage.cn" && skip2 == true && isllq() != false){
+  if(navigator.language == "zh-CN"){
+    location.href = "https://elythy.gitee.io/";
   }
 }
 
