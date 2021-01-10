@@ -3,7 +3,7 @@
  src: url('/font/master.ttf');
 }
 html{
-  background-image: url('/img/background.png');
+  background-image: url('/img/background.jpg');
   background-color: #aaa;
   background-size: cover;
   -webkit-background-size: cover 100%;
@@ -16,39 +16,7 @@ html{
   margin: 0; 
   padding: 0;
 }
-/*
-@media (max-width: 300px){
-  body{
-    background-image: linear-gradient(to bottom, #4158d0, #ffcc70, #c850c0);
-    background-size: cover;
-    -webkit-background-size: cover 100%;
-    -o-background-size: cover 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-    min-height: 100%;
-    margin: 0; 
-    padding: 0;
-  }
-}
-@media (min-width: 301px){
-  body{
-    background-image: url('/img/background.png');
-    background-size: cover;
-    -webkit-background-size: cover 100%;
-    -o-background-size: cover 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-    min-height: 100%;
-    margin: 0; 
-    padding: 0;
-  }
-}
-*/
-p,h1,h2,h3,h4,h5,h6,pre{
+p,h1,h2,h3,h4,h5,h6,pre,i,b{
   font-family: master;
 }
 a{
