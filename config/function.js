@@ -55,7 +55,8 @@ function video(){
     "BV1B54y1z7Qq",
     "BV1op4y1k79P",
     "BV1Nv411r7yU",
-    "BV1ua4y1n785"
+    "BV1ua4y1n785",
+    "BV1hh41127Y9"
   ];
   var number = 0;
   document.write('<div style="height:55px;width:100%;"></div>');
@@ -209,6 +210,7 @@ function PFT(){
     <a href="JavaScript:contact('qun');"><p class="pt" style="text-align:center;">加入Q群</p></a>
     <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：background.jpg、background2.jpg、background.png'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
     <a href="JavaScript:player(prompt('请输入音乐链接'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
+    <a href="JavaScript:playvideo(prompt('请输入视频链接或者哔哩哔哩BV号'));"><p class="pt" style="text-align:center;">播放视频</p></a>
   `);
 }
 function Change_Background(url){
@@ -243,5 +245,36 @@ function player(url){
   if(url != null){
     var audio= new Audio(url);
     audio.play();
+  }
+}
+function playvideo(url){
+  if(url != null){
+    if(ispc() == false){
+      var style=`
+        <style>
+          .iv{
+            width: 100%;
+            height: 56%;
+          }
+        </style>
+      `;
+    } else if(ispc() == true){
+      var style=`
+        <style>
+          .iv{
+            width: 64%;
+            height: 36%;
+          }
+        </style>
+      `;
+    }
+    var head = document.getElementsByTagName('head')[0];
+    head.innerHTML += style;
+    if(url.substr(0,2) == "BV"){
+      url = "http://player.bilibili.com/player.html?danmaku=0&high_quality=1&bvid="+url;
+      bullet("<iframe src=\""+url+"\" id=\"iv\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\" class=\"iv\"></iframe>");
+    } else {
+      bullet('<video class="iv" controls autoplay><source src="'+url+'" type="video/mp4"><source src="'+url+'" type="video/ogg"><source src="'+url+'" type="video/webm"><object data="'+url+'" class="iv"><embed src="'+url+'" class="iv"></object></video>');
+    }
   }
 }
