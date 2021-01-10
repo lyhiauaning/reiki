@@ -12,7 +12,7 @@ if(location.host != "gulanguage.cn" && skip == true && website == true){
   location.href="/page/off.html";
 }
 
-if(location.href == "gulanguage.cn" && skip2 == true){
+if(location.href == "https://gulanguage.cn/" && skip2 == true){
   if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   } else if(navigator.language == "en-US"){
