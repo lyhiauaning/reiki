@@ -17,8 +17,6 @@ if(location.host == "gulanguage.cn" && skip2 == true){
     location.href = "https://elythy.gitee.io/";
   } else if(navigator.language == "en-US"){
     location.href = "https://www.gulanguage.cn/";
-  } else {
-    location.href = "https://gulanguage.cn/"
   }
 }
 
