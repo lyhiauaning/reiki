@@ -102,13 +102,15 @@ function contact(id){
       if(isllq() == "QQ"){
         location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
       } else {
-        bullet('<img src="/img/qq.png">');
+        bullet('扫描以下二维码加我好友或者在QQ中打开本页<img src="/img/qq.png">');
       }
     } else if(ispc() == false){
       if (isllq() == "QQ"){
         location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
       } else {
         location.href="mqqwpa://im/chat?chat_type=wpa&uin=2185750134";
+        sleep(3000);
+        location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
       }
     }
   } else if(id == "mail"){
@@ -116,24 +118,32 @@ function contact(id){
       alert('邮箱：lyhiauaning@163.com');
     } else if(ispc() == false){
       location.href="mailto:lyhiauaning@163.com";
+      sleep(3000);
+      alert('邮箱：lyhiauaning@163.com');
     }
   } else if(id == "qun"){
     if(ispc() == true){
       alert('群号码：821096499');
     } else if(ispc() == false){
       location.href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=821096499&card_type=group&source=qrcode";
+      sleep(3000);
+      alert('群号码：821096499');
     }
   } else if(id == "qun2"){
     if(ispc() == true){
       alert('群号码：624953187');
     } else if(ispc() == false){
       location.href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=624953187&card_type=group&source=qrcode";
+      sleep(3000);
+      alert('群号码：624953187');
     }
   } else if(id == "bili"){
     if(ispc() == true){
       location.href="https://space.bilibili.com/507050386";
     } else if(ispc() == false){
       location.href="bilibili://space/507050386";
+      sleep(3000);
+      location.href="https://space.bilibili.com/507050386";
     }
   }
 }
@@ -208,4 +218,7 @@ function Change_Background(url){
   `;
   var head = document.getElementsByTagName('head')[0];
   head.innerHTML += style;
+}
+function sleep(d){
+  for(var t = Date.now();Date.now() - t <= d;);
 }
