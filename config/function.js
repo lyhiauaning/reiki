@@ -209,7 +209,7 @@ function PFT(){
     <a href="JavaScript:contact('mail');"><p class="pt" style="text-align:center;">邮箱反馈</p></a>
     <a href="JavaScript:contact('qun');"><p class="pt" style="text-align:center;">加入Q群</p></a>
     <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：background.jpg、background2.jpg、background.png'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
-    <a href="JavaScript:player(prompt('请输入音乐链接'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
+    <a href="JavaScript:player(prompt('请输入音乐链接或者网易云音乐id'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
     <a href="JavaScript:playvideo(prompt('请输入视频链接或者哔哩哔哩BV号'));"><p class="pt" style="text-align:center;">播放视频</p></a>
   `);
 }
@@ -217,6 +217,10 @@ function Change_Background(url){
   if(url != null){
     if(url.substr(0,4) != "http"){
       url = "/img/" + url;
+    } else if(url == "null"){
+      url = null;
+    } else if(url == null){
+      url = '/img/background.jpg';
     }
     var style=`
       <style>
@@ -243,6 +247,9 @@ function sleep(d){
 }
 function player(url){
   if(url != null){
+    if(url.substr(0,4) != "http"){
+      url = "http://music.163.com/song/media/outer/url?id="+url;
+    }
     var audio= new Audio(url);
     audio.play();
   }
