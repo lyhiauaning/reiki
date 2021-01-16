@@ -278,3 +278,12 @@ function playvideo(url){
     }
   }
 }
+function safeskip(url,text){
+  if(text == null){
+    var text = "确定跳转?无法确定网址的安全性!";
+  }
+  var wi = confirm(text);
+  if(wi == true){
+    location.href = url;
+  }
+}
