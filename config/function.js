@@ -12,7 +12,7 @@ function menu(){
     <li class="active"><a href="/page/video.html"><discoloration>B站视频</discoloration></a></li>
     <li class="active"><a href="/page/code.html"><discoloration>代码页面</discoloration></a></li>
     <li class="active"><a href="/page/a-z.html"><discoloration>A-Z站</discoloration></a></li>
-    <li class="active"><a href="/page/mcdown.html"><discoloration>下载MC</discoloration></a></li>
+    <li class="active"><a href="JavaScript:safeskip('https://www.118pan.com/wap.php?action=space&uid=0&folder_id=11286','stop')"><discoloration>下载MC</discoloration></a></li>
   `;
     document.write(menu);
 }
@@ -212,7 +212,7 @@ function PFT(){
     <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：0~2'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
     <a href="JavaScript:player(prompt('请输入音乐链接或者网易云音乐id'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
     <a href="JavaScript:playvideo(prompt('请输入视频链接或者哔哩哔哩BV号'));"><p class="pt" style="text-align:center;">播放视频</p></a>
-    <a href="/page/mcdown.html"><p class="pt" style="text-align:center;">下载MC</p></a>
+    <a href="JavaScript:safeskip('https://www.118pan.com/wap.php?action=space&uid=0&folder_id=11286','stop')"><p class="pt" style="text-align:center;">下载MC</p></a>
   `);
 }
 function Change_Background(url){
@@ -293,10 +293,19 @@ function playvideo(url){
   }
 }
 function safeskip(url,text){
+  var bulletwindow = true;
   if(text == null){
     var text = "确定跳转?无法确定网址的安全性!";
+  } else if(text == "return"){
+    return
+  } else if(text == "stop"){
+    var bulletwindow = false;
   }
-  var wi = confirm(text);
+  if(bulletwindow == true){
+    var wi = confirm(text);
+  } else if(bulletwindow = true){
+    var wi = true;
+  }
   if(wi == true){
     location.href = url;
   }
