@@ -209,7 +209,7 @@ function PFT(){
     <a href="JavaScript:contact('qq');"><p class="pt" style="text-align:center;">QQ联系</p></a>
     <a href="JavaScript:contact('mail');"><p class="pt" style="text-align:center;">邮箱反馈</p></a>
     <a href="JavaScript:contact('qun');"><p class="pt" style="text-align:center;">加入Q群</p></a>
-    <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：0~2'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
+    <a href="JavaScript:Change_Background(prompt('请输入链接\n您可以输入网址或者：0~3'))"><p class="pt" style="text-align:center;">更换壁纸</p></a>
     <a href="JavaScript:player(prompt('请输入音乐链接或者网易云音乐id'));"><p class="pt" style="text-align:center;">播放音乐</p></a>
     <a href="JavaScript:playvideo(prompt('请输入视频链接或者哔哩哔哩BV号'));"><p class="pt" style="text-align:center;">播放视频</p></a>
     <a href="JavaScript:safeskip('https://www.118pan.com/wap.php?action=space&uid=0&folder_id=11286','stop')"><p class="pt" style="text-align:center;">下载MC</p></a>
@@ -221,7 +221,8 @@ function Change_Background(url){
       var storage = [
         "background.jpg",
         "background.png",
-        "background2.jpg"
+        "background2.jpg",
+        "background_fj.png"
       ]
       url = "./img/" + storage[url];
     } else if(url == "null"){
