@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
-    <script src="/script.js"></script>
-    <script src="/plug-js/alert.js"></script>
+    <script src="./script.js"></script>
+    <script src="./plug-js/alert.js"></script>
     <script>
       function sponsor_dump(){
         if(ispc() == false){
           if(isllq() == "QQ"){
-            bullet('请长按识别二维码，如不能识别先保存，在扫一扫中再识别<br /><img src="/img/qqsponsor.png">');
+            bullet('请长按识别二维码，如不能识别先保存，在扫一扫中再识别<br /><img src="./img/qqsponsor.png">');
           } else if(isllq() == "weixin"){
-            bullet('请长按识别二维码，如不能识别先保存，在扫一扫中再识别<br /><img src="/img/wxsponsor.png">');
+            bullet('请长按识别二维码，如不能识别先保存，在扫一扫中再识别<br /><img src="./img/wxsponsor.png">');
           } else if(isllq() == "alipay"){
             location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
           } else {
@@ -22,7 +22,7 @@
             /*document.write('<p>请选择一个图片保存，然后在对应的扫一扫中打开，如果是支付宝：<a href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7">请点击我</a></p><br /><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iwoMKjbrw5e&dow=true" width="100vw"><img src="https://res.abeim.cn/api-lanzou_jx?url=https://gulanguage.lanzous.com/iTjIkjbrw4d&dow=true" width="100vw">');*/
           }
         } else {
-          bullet('<p>请选择一个图片保存，然后在对应的扫一扫中打开，如果是支付宝：<a href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7">请点击我</a></p><br /><img src="/img/qqsponsor.png" width="100vw"><img src="/img/wxsponsor.png" width="100vw">');
+          bullet('<p>请选择一个图片保存，然后在对应的扫一扫中打开，如果是支付宝：<a href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7">请点击我</a></p><br /><img src="./img/qqsponsor.png" width="100vw"><img src="./img/wxsponsor.png" width="100vw">');
         }
       }
       sponsor_dump();

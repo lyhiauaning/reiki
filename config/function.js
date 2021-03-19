@@ -8,10 +8,10 @@ function Substitution(id,url,text,type){
 }
 function menu(){
   var menu=`
-    <li class="active"><a href="/"><discoloration>本站主页</discoloration></a></li>
-    <li class="active"><a href="/page/video.html"><discoloration>B站视频</discoloration></a></li>
-    <li class="active"><a href="/page/code.html"><discoloration>代码页面</discoloration></a></li>
-    <li class="active"><a href="/page/a-z.html"><discoloration>A-Z站</discoloration></a></li>
+    <li class="active"><a href="./"><discoloration>本站主页</discoloration></a></li>
+    <li class="active"><a href="./?page=video"><discoloration>B站视频</discoloration></a></li>
+    <li class="active"><a href="./?page=code"><discoloration>代码页面</discoloration></a></li>
+    <li class="active"><a href="./?page=a-z"><discoloration>A-Z站</discoloration></a></li>
     <li class="active"><a href="JavaScript:safeskip('https://www.118pan.com/wap.php?action=space&uid=0&folder_id=11286','stop')"><discoloration>下载MC</discoloration></a></li>
   `;
     document.write(menu);
@@ -104,7 +104,7 @@ function contact(id){
       if(isllq() == "QQ"){
         location.href="https://qm.qq.com/cgi-bin/qm/qr?k=q7keB45HI7su0vVuSUQx6KBtz9STSymr&noverify=0";
       } else {
-        bullet('扫描以下二维码加我好友或者在QQ中打开本页<img src="/img/qq.png">');
+        bullet('扫描以下二维码加我好友或者在QQ中打开本页<img src="./img/qq.png">');
       }
     } else if(ispc() == false){
       if (isllq() == "QQ"){
@@ -158,18 +158,18 @@ function update(){
 }
 function sponsor(){
   if(ispc() == true){
-    bullet('手机扫码：<br /><img src="/img/pay.png">');
+    bullet('手机扫码：<br /><img src="./img/pay.png">');
   } else {
     if(isllq() == "weixin"){
-      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/wxsponsor.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="./img/wxsponsor.png">');
       /*location.href="wxp://f2f0849aCf7Jr8dy2dWhFEkJNzQf2-0YO1HZ";*/
     } else if(isllq() == "QQ"){
-      bullet('请保存图片，然后在扫一扫中打开<br /><img src="/img/qqsponsor.png">');
+      bullet('请保存图片，然后在扫一扫中打开<br /><img src="./img/qqsponsor.png">');
       /*location.href="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ9syfkggYgYfO_gU%3D_xxx_sign&u=2185750134&n=Gulanguage";*/
     } else if(isllq() == "alipay"){
       location.href="https://qr.alipay.com/fkx14736rwmc3qspfq3hlf7";
     } else {
-      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="/page/sponsor.html">我</a><br /><img src="/img/pay.png">');
+      bullet('手机扫码，如果是在QQ、微信、支付宝中打开，那么请点击<a href="./?page=sponsor">我</a><br /><img src="./img/pay.png">');
     }
   }
 }
@@ -198,14 +198,14 @@ function pp(tp){
 function PFunction(){
   bullet(`
     <h1>功能区</h1>
-    <iframe src="/page/pfunction.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="pfunction"></iframe>
+    <iframe src="./?page=pfunction" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="pfunction"></iframe>
   `);
 }
 function PFT(){
   bullet(`
-    <a href="/page/video.html"><p class="pt" style="text-align:center;">B站视频</p></a>
-    <a href="/page/code.html"><p class="pt" style="text-align:center;">代码源码</p></a>
-    <a href="/page/a-z.html"><p class="pt" style="text-align:center;">A-Z站</p></a>
+    <a href="./?page=video"><p class="pt" style="text-align:center;">B站视频</p></a>
+    <a href="./?page=code"><p class="pt" style="text-align:center;">代码源码</p></a>
+    <a href="./?page=a-z"><p class="pt" style="text-align:center;">A-Z站</p></a>
     <a href="JavaScript:contact('qq');"><p class="pt" style="text-align:center;">QQ联系</p></a>
     <a href="JavaScript:contact('mail');"><p class="pt" style="text-align:center;">邮箱反馈</p></a>
     <a href="JavaScript:contact('qun');"><p class="pt" style="text-align:center;">加入Q群</p></a>
