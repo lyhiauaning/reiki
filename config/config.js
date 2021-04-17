@@ -5,28 +5,28 @@ var title = "曦灵";//网站名称
 var skip2 = true;//跳转、加速机制2
 
 /*机制*/
-if(location.host != "gulanguage.cn" && skip == true && website == true){
+if(location.host != "xireiki.com" && skip == true && website == true){
   alert("警告，你在访问假的网站！");
-  location.href="https://gulanguage.cn/";
-} else if(location.host != "gulanguage.cn" && skip == true && website == false){
+  location.href="https://xireiki.com/";
+} else if(location.host != "xireiki.com" && skip == true && website == false){
   location.href="./?page=off";
 }
 
-if(location.host == "gulanguage.cn" && skip2 == true && isllq() == false){
+if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
   if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   } else if(navigator.language == "en-US"){
-    location.href = "https://www.gulanguage.cn/";
+    location.href = "https://www.xireiki.com/";
   }
 } else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
   if(navigator.language == "en-US"){
-    location.href = "https://www.gulanguage.cn/";
+    location.href = "https://www.xireiki.com/";
   }
-} else if(location.host == "www.gulanguage.cn" && skip2 == true && isllq() == false){
+} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() == false){
   if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   }
-} else if(location.host == "www.gulanguage.cn" && skip2 == true && isllq() != false){
+} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
   if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   }
