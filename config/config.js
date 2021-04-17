@@ -20,6 +20,14 @@ if(isllq() == "QQ"){
   } else if(location != "https://www.xireiki.com/404.html"){
     location.href = "https://xireiki.com/404.html";
   }
+} else if(isllq() == "weixin"){
+  if(location != "https://xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://elythy.gitee.io/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://www.xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  }
 } else {
   if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
     if(navigator.language == "zh-CN"){
