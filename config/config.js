@@ -12,23 +12,41 @@ if(location.host != "xireiki.com" && skip == true && website == true){
   location.href="./?page=off";
 }
 
-if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
-  if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
-  } else if(navigator.language == "en-US"){
-    location.href = "https://www.xireiki.com/";
+if(isllq() == "QQ"){
+  if(location != "https://xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://elythy.gitee.io/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://www.xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
   }
-} else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
-  if(navigator.language == "en-US"){
-    location.href = "https://www.xireiki.com/";
+} else if(isllq() == "weixin"){
+  if(location != "https://xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://elythy.gitee.io/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://www.xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
   }
-} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() == false){
-  if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
-  }
-} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
-  if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
+} else {
+  if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    } else if(navigator.language == "en-US"){
+      location.href = "https://www.xireiki.com/";
+    }
+  } else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
+    if(navigator.language == "en-US"){
+      location.href = "https://www.xireiki.com/";
+    }
+  } else if(location.host == "www.xireiki.com" && skip2 == true && isllq() == false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    }
+  } else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    }
   }
 }
 
