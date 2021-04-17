@@ -11,27 +11,28 @@ if(location.host != "xireiki.com" && skip == true && website == true){
 } else if(location.host != "xireiki.com" && skip == true && website == false){
   location.href="/page/off.html";
 }
-
-if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
-  if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
-  } else if(navigator.language == "en-US"){
-    location.href = "https://www.xireiki.com/";
-  }
-} else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
-  if(navigator.language == "en-US"){
-    location.href = "https://www.xireiki.com/";
-  }
-} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() == false){
-  if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
-  }
-} else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
-  if(isllq() == "QQ"){
-    location.href = "https://xireiki.com/404.html";
-  } else if(navigator.language == "zh-CN"){
-    location.href = "https://elythy.gitee.io/";
-  }
+if(isllq() == "QQ"){
+  location.href = "https://xireiki.com/404.html";
+} else {
+  if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    } else if(navigator.language == "en-US"){
+      location.href = "https://www.xireiki.com/";
+    }
+  } else if(location.host == "elythy.gitee.io" && skip2 == true && isllq() == false){
+    if(navigator.language == "en-US"){
+      location.href = "https://www.xireiki.com/";
+    }
+  } else if(location.host == "www.xireiki.com" && skip2 == true && isllq() == false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    }
+  } else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
+    if(navigator.language == "zh-CN"){
+      location.href = "https://elythy.gitee.io/";
+    }
+}
 }
 
 if(website == false){
