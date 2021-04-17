@@ -11,8 +11,15 @@ if(location.host != "xireiki.com" && skip == true && website == true){
 } else if(location.host != "xireiki.com" && skip == true && website == false){
   location.href="/page/off.html";
 }
+
 if(isllq() == "QQ"){
-  location.href = "https://xireiki.com/404.html";
+  if(location != "https://xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://elythy.gitee.io/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(location != "https://www.xireiki.com/404.html"){
+    location.href = "https://xireiki.com/404.html";
+  }
 } else {
   if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
     if(navigator.language == "zh-CN"){
