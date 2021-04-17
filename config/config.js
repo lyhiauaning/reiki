@@ -47,7 +47,7 @@ if(isllq() == "QQ"){
     if(navigator.language == "zh-CN"){
       location.href = "https://elythy.gitee.io/";
     }
-}
+  }
 }
 
 if(website == false){
