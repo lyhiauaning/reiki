@@ -27,7 +27,9 @@ if(location.host == "xireiki.com" && skip2 == true && isllq() == false){
     location.href = "https://elythy.gitee.io/";
   }
 } else if(location.host == "www.xireiki.com" && skip2 == true && isllq() != false){
-  if(navigator.language == "zh-CN"){
+  if(isllq() == "QQ"){
+    location.href = "https://xireiki.com/404.html";
+  } else if(navigator.language == "zh-CN"){
     location.href = "https://elythy.gitee.io/";
   }
 }
