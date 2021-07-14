@@ -53,3 +53,16 @@ if(isllq() == "QQ"){
 if(website == false){
   location.href="/page/off.html";
 }
+
+/*
+function OnBtnClick(type) {
+  var content = {
+    title: "公告" ,
+    content: "1.没有公告"
+  };
+  zi_notify.showNotify(type, content);
+}
+window.onload = function(){
+  OnBtnClick("");
+}
+*/
