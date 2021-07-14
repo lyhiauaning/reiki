@@ -2,7 +2,7 @@
 var website = true;//网站总开关
 var skip = false;//跳转机制
 var title = "曦灵";//网站名称
-var skip2 = true;//跳转、加速机制2
+var skip2 = false;//跳转、加速机制2
 
 /*机制*/
 if(location.host != "xireiki.com" && skip == true && website == true){
